@@ -1,0 +1,304 @@
+/* src/app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #f8f9fa;
+  --text-color: #1a202c;
+  --navbar-bg-color: #ffffff;
+  --sidebar-bg-color: #2a3d45; /* Dark sage */
+  --navbar-text-color: #000000;
+  --primary-color: #3182ce; /* Modern blue */
+  --hover-bg-color: #3e5361; /* Slightly darker for hover effect */
+  --hover-text-color: #e2e8f0; /* Light text color on hover */
+  --active-bg-color: #3182ce; /* Blue for active item */
+  --active-text-color: #ffffff;
+  --accent-color: #e94560; /* Bright accent color */
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --navbar-bg-color: #1f1f1f;
+  --sidebar-bg-color: #2c2c2c;
+  --navbar-text-color: #ffffff;
+  --primary-color: #63b3ed; /* Light blue */
+  --hover-bg-color: #3e5361;
+  --hover-text-color: #cbd5e0;
+  --active-bg-color: #63b3ed;
+  --active-text-color: #1a202c;
+  --accent-color: #ff6f61;
+  --container-bg-color: #1e1e1e; /* Dark background for containers */
+  --card-bg-color: #2a2a2a; /* Dark background for cards */
+  --input-bg-color: #333333; /* Dark background for input fields */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+  transition: background-color 0.3s, color 0.3s;
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+  height: 100vh;
+  transition: width 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  height: 16px;
+  width: 16px;
+  background-color: #e94560;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Profile Page Enhancements */
+.profile-container {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Adjusted for full width */
+  margin: 0 auto;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.profile-edit-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+}
+
+.profile-name {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-status {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.profile-bio {
+  margin-top: 1rem;
+}
+
+.profile-social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-social-icon {
+  font-size: 1.5rem;
+}
+
+.profile-btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-btn:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+.bg-gray-700 {
+  background-color: #374151;
+}
+
+.notification-container {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.sidebar-logo {
+  font-size: 1.875rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s;
+}
+
+.sidebar-menu {
+  margin-top: 1.5rem;
+  flex-grow: 1;
+}
+
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.sidebar-menu-item:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-menu-item.active {
+  background-color: var(--active-bg-color);
+  color: var(--active-text-color);
+}
+
+.sidebar-menu-item.collapsed {
+  justify-content: center;
+}
+
+.icon {
+  font-size: 1.25rem;
+  transition: color 0.3s;
+  color: white;
+}
+
+.sidebar-menu-item span {
+  font-size: 1rem;
+  margin-left: 1rem;
+  transition: opacity 0.3s;
+  color: white;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  transition: color 0.3s;
+}
+
+main {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem;
+  overflow-y: auto;
+  flex: 1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container.dark {
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+}
+
+.affiliate-status {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.affiliate-status h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.affiliate-status button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.affiliate-status button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.affiliate-status p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.affiliate-status .error {
+  color: red;
+  font-size: 16px;
+}
